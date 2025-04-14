@@ -6,7 +6,14 @@ import { useAuth } from '@/lib/hooks/useAuth';
 import PersonDetails from '@/components/PersonDetails';
 import Navbar from '@/components/Navbar';
 
-export default function PersonPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default function PersonPage({ params }: PageProps) {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
