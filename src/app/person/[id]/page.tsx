@@ -6,28 +6,27 @@ import { useAuth } from '@/lib/hooks/useAuth';
 import PersonDetails from '@/components/PersonDetails';
 import Navbar from '@/components/Navbar';
 
-interface PageProps {
+type PersonPageProps = {
   params: {
     id: string;
   };
-  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default function PersonPage({ params }: PageProps) {
+export default function PersonPage({ params: { id } }: PersonPageProps) {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [personId, setPersonId] = useState<string | null>(null);
   
   useEffect(() => {
-    if (params.id) {
-      console.log('Person page: ID from params:', params.id);
-      setPersonId(params.id);
+    if (id) {
+      console.log('Person page: ID from params:', id);
+      setPersonId(id);
     } else {
       console.error('Person page: Missing ID in params');
       setError('IDが指定されていません');
     }
-  }, [params.id]);
+  }, [id]);
   
   useEffect(() => {
     if (!loading && !user) {
