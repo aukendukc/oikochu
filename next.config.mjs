@@ -26,8 +26,8 @@ const nextConfig = {
     unoptimized: true,
   },
   distDir: ".next",
-  output: "export",
   trailingSlash: true,
+  swcMinify: true,
 };
 
 export default nextConfig;
