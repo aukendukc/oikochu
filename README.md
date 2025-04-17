@@ -73,6 +73,23 @@ npm run build
 npm start
 ```
 
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Visit [Vercel](https://vercel.com/) and create an account if you don't have one
+2. Click "Add New..." → "Project"
+3. Import your GitHub repository
+4. Configure the following settings:
+   - Framework Preset: Next.js
+   - Root Directory: ./
+   - Build Command: npm run build
+   - Output Directory: .next
+5. Add any required environment variables (the same ones used in .env.local)
+6. Click "Deploy"
+
+For more details, see the [Vercel Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
 ## 使用方法
 
 1. Google アカウントでログイン
