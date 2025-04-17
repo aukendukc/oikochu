@@ -23,9 +23,11 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true,
   },
   distDir: ".next",
-  output: "standalone"
+  output: "export",
+  trailingSlash: true,
 };
 
 export default nextConfig;
