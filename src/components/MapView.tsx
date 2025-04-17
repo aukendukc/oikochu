@@ -38,6 +38,58 @@ export default function MapView() {
   const [selectedPersonId, setSelectedPersonId] = useState<string | null>(null);
   const { user } = useAuth();
   const searchParams = useSearchParams();
+  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
+  const userMarkerRef = useRef<google.maps.Marker | null>(null);
+  
+  // ユーザーの現在位置を取得する関数
+  const getUserLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const userPos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          setUserLocation(userPos);
+          
+          // 地図が既に読み込まれている場合
+          if (map) {
+            // 地図の中心を現在位置に移動
+            map.setCenter(userPos);
+            map.setZoom(16);
+            
+            // 既存のユーザーマーカーがあれば削除
+            if (userMarkerRef.current) {
+              userMarkerRef.current.setMap(null);
+            }
+            
+            // 新しいユーザーマーカーを作成
+            const marker = new google.maps.Marker({
+              position: userPos,
+              map: map,
+              title: '現在地',
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: '#4285F4', // Googleブルー
+                fillOpacity: 1,
+                strokeWeight: 2,
+                strokeColor: '#FFFFFF',
+                scale: 8
+              }
+            });
+            
+            userMarkerRef.current = marker;
+          }
+        },
+        (error) => {
+          console.error('位置情報の取得に失敗しました:', error);
+          alert('位置情報の取得に失敗しました。ブラウザの位置情報へのアクセスを許可してください。');
+        }
+      );
+    } else {
+      alert('お使いのブラウザは位置情報をサポートしていません。');
+    }
+  };
   
   // Initialize Google Maps
   useEffect(() => {
@@ -96,6 +148,9 @@ export default function MapView() {
           setShowForm(true);
         }
       });
+      
+      // ユーザーの現在位置を取得して表示
+      getUserLocation();
     };
     
     // Load Google Maps script
@@ -305,8 +360,21 @@ export default function MapView() {
   };
   
   return (
-    <div className="w-full h-[calc(100vh-64px)]">
+    <div className="w-full h-[calc(100vh-64px)] relative">
       <div ref={mapRef} className="w-full h-full"></div>
+      
+      {/* 現在位置ボタン */}
+      <button
+        onClick={getUserLocation}
+        className="absolute bottom-20 right-4 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 dark:hover:bg-gray-700"
+        aria-label="現在位置に移動"
+        title="現在位置に移動"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button>
       
       {/* 簡易情報ポップアップ */}
       {selectedPerson && !showDetailsPopup && (
