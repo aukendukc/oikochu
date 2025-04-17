@@ -26,7 +26,6 @@ const nextConfig = {
     unoptimized: true,
   },
   distDir: ".next",
-  trailingSlash: true,
   swcMinify: true,
 };
 
