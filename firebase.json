@@ -1,13 +1,16 @@
 {
   "hosting": {
-    "source": ".",
+    "public": ".next/standalone",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "frameworksBackend": {
-      "region": "asia-northeast1"
-    }
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 } 
