@@ -1,0 +1,12 @@
+{
+  "name": "template-2",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "cd .. && npm run build",
+    "start": "cd .. && npm run start"
+  }
+} 
