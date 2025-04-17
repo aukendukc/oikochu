@@ -1,0 +1,102 @@
+[debug] [2025-04-17T11:45:40.133Z] ----------------------------------------------------------------------
+[debug] [2025-04-17T11:45:40.137Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\eguch\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-04-17T11:45:40.137Z] CLI Version:   14.1.0
+[debug] [2025-04-17T11:45:40.137Z] Platform:      win32
+[debug] [2025-04-17T11:45:40.138Z] Node Version:  v22.14.0
+[debug] [2025-04-17T11:45:40.138Z] Time:          Thu Apr 17 2025 20:45:40 GMT+0900 (GMT+09:00)
+[debug] [2025-04-17T11:45:40.138Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-17T11:45:40.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-17T11:45:40.390Z] > authorizing via signed-in user (eguchi.tomoki.eguo@gmail.com)
+[debug] [2025-04-17T11:45:40.390Z] [iam] checking project oikos-4bf07 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-17T11:45:40.391Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:40.392Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:40.392Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oikos-4bf07:testIamPermissions [none]
+[debug] [2025-04-17T11:45:40.393Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/oikos-4bf07:testIamPermissions x-goog-quota-user=projects/oikos-4bf07
+[debug] [2025-04-17T11:45:40.393Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oikos-4bf07:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-17T11:45:41.251Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oikos-4bf07:testIamPermissions 200
+[debug] [2025-04-17T11:45:41.251Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oikos-4bf07:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-17T11:45:41.252Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:41.252Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:41.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07 [none]
+[debug] [2025-04-17T11:45:41.762Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07 200
+[debug] [2025-04-17T11:45:41.762Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07 {"projectId":"oikos-4bf07","projectNumber":"1081771625262","displayName":"oikos","name":"projects/oikos-4bf07","resources":{"hostingSite":"oikos-4bf07","realtimeDatabaseInstance":"oikos-4bf07-default-rtdb"},"state":"ACTIVE","etag":"1_bcd200c1-8646-4820-8d8b-e6763a3e402e"}
+[debug] [2025-04-17T11:45:44.726Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:44.726Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:44.726Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites pageToken=&pageSize=10
+[debug] [2025-04-17T11:45:45.792Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites 200
+[debug] [2025-04-17T11:45:45.792Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites {"sites":[{"name":"projects/oikos-4bf07/sites/oikos-4bf07","defaultUrl":"https://oikos-4bf07.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-04-17T11:45:45.793Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:45.794Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:45.794Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites 
+[debug] [2025-04-17T11:45:46.258Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites 200
+[debug] [2025-04-17T11:45:46.259Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites {"sites":[{"name":"projects/oikos-4bf07/sites/oikos-4bf07","defaultUrl":"https://oikos-4bf07.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-04-17T11:45:46.259Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:46.259Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:46.259Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07/webApps/-/config [none]
+[debug] [2025-04-17T11:45:47.417Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07/webApps/-/config 200
+[debug] [2025-04-17T11:45:47.418Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oikos-4bf07/webApps/-/config {"projectId":"oikos-4bf07","appId":"1:1081771625262:web:863be88a259d66a88688bf","databaseURL":"https://oikos-4bf07-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"oikos-4bf07.firebasestorage.app","apiKey":"AIzaSyB5y7Hl1TkxMnT6m1YCwFXONgvy6yUKhbo","authDomain":"oikos-4bf07.firebaseapp.com","messagingSenderId":"1081771625262","measurementId":"G-M3BK9HT70X"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-04-17T11:45:54.890Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:54.890Z] Checked if tokens are valid: true, expires at: 1744893484575
+[debug] [2025-04-17T11:45:54.891Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites/oikos-4bf07 [none]
+[debug] [2025-04-17T11:45:55.794Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites/oikos-4bf07 200
+[debug] [2025-04-17T11:45:55.794Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/oikos-4bf07/sites/oikos-4bf07 {"name":"projects/oikos-4bf07/sites/oikos-4bf07","defaultUrl":"https://oikos-4bf07.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.0
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 19.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/components/MapView.tsx
+169:6  Warning: React Hook useEffect has a missing dependency: 'getUserLocation'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+333:6  Warning: React Hook useEffect has a missing dependency: 'markers'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/PersonDetails.tsx
+165:6  Warning: React Hook useEffect has a missing dependency: 'isPopup'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/components/PersonForm.tsx
+373:27  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/SignInWithGoogle.tsx
+13:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/person/[id]/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-04-17T11:46:30.692Z] Error: ENOENT: no such file or directory, open 'C:\Users\eguch\OneDrive\デスクトップ\template-2-main\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
