@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',  // 静的なHTMLファイルを生成するための設定
   basePath: process.env.NODE_ENV === 'production' ? '/oikochu' : '',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -25,7 +26,6 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    unoptimized: true,
   },
   distDir: ".next",
   swcMinify: true,
