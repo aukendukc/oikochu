@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "netlify-build": "npm install && next build"
+    "netlify-build": "npm install && next build",
+    "export": "next export"
   },
   "dependencies": {
     "@deepgram/sdk": "^3.6.0",
