@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/replicate/generate-image/route": "app/api/replicate/generate-image/route.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/people/page": "app/people/page.js",
+  "/person/[id]/page": "app/person/[id]/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/api/deepgram/route": "app/api/deepgram/route.js"
+}
