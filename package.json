@@ -9,10 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "netlify-build": "npm install && next build",
-    "export": "next export",
-    "render-build": "echo 'Current directory:' && pwd && echo 'Directory contents:' && ls -la && npm install && npm run build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@deepgram/sdk": "^3.6.0",
