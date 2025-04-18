@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // 静的なHTMLファイルを生成するための設定
-  basePath: process.env.NODE_ENV === 'production' ? '/oikochu' : '',
-  // App Routerで不要なAPIルートを除外
+  // Renderではフルサーバー機能を使うため、output: exportを削除
+  // basePath設定も削除（独自ドメインのルートに配置するため）
   distDir: ".next",
   swcMinify: true,
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
