@@ -3,7 +3,7 @@ services:
     name: oikochu
     env: node
     rootDir: .
-    buildCommand: npm ci || npm install && npm run build
+    buildCommand: npm run render-build
     startCommand: npm start
     plan: free
     envVars:
