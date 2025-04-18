@@ -2,9 +2,9 @@ services:
   - type: web
     name: oikochu
     env: node
-    rootDir: .
-    buildCommand: npm run render-build
-    startCommand: npm start
+    rootDir: /
+    buildCommand: cd /opt/render/project/repo && npm run render-build
+    startCommand: cd /opt/render/project/src && npm start
     plan: free
     envVars:
       - key: NODE_ENV
