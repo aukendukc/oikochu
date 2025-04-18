@@ -12,7 +12,7 @@
     "lint": "next lint",
     "netlify-build": "npm install && next build",
     "export": "next export",
-    "render-build": "echo 'Starting render build...' && cd /opt/render/project/src && mkdir -p temp && cp -R /opt/render/project/repo/* /opt/render/project/src/ && echo 'Files copied to correct location' && ls -la && npm install && npm run build"
+    "render-build": "echo 'Current directory:' && pwd && echo 'Directory contents:' && ls -la && npm install && npm run build"
   },
   "dependencies": {
     "@deepgram/sdk": "^3.6.0",
