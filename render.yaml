@@ -2,7 +2,7 @@ services:
   - type: web
     name: oikochu
     env: node
-    buildCommand: "./render-build.sh"
+    buildCommand: "bash -c 'mkdir -p /opt/render/project/src && cp -f package.json package-lock.json /opt/render/project/src/ && cd /opt/render/project/src/ && npm install && npm run build'"
     startCommand: npm start
     plan: free
     envVars:
