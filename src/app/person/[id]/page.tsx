@@ -1,5 +1,5 @@
 // サーバーコンポーネントとしてのページ
-import PersonPageClient from './PersonPageClient';
+import ClientPersonPage from '@/components/ClientPersonPage';
 
 interface PageProps {
   params: {
@@ -8,5 +8,5 @@ interface PageProps {
 }
 
 export default function PersonPage({ params }: PageProps) {
-  return <PersonPageClient params={params} />;
+  return <ClientPersonPage id={params.id} />;
 } 
