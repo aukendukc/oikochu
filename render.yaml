@@ -2,8 +2,7 @@ services:
   - type: web
     name: oikochu
     env: node
-    rootDir: ./
-    buildCommand: npm run build
+    buildCommand: "./render-build.sh"
     startCommand: npm start
     plan: free
     envVars:

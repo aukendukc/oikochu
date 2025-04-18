@@ -6,6 +6,7 @@
     "node": "18.17.0"
   },
   "scripts": {
+    "preinstall": "mkdir -p /opt/render/project/src && cp -f package.json /opt/render/project/src/ || true",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
