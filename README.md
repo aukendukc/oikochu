@@ -90,6 +90,22 @@ npm start
 
 For more details, see the [Vercel Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
+### Deploy to Render (With Full API Support)
+
+1. Create an account on [Render](https://render.com/)
+2. Click "New +" and select "Web Service"
+3. Connect with GitHub and select your repository
+4. Configure the service:
+   - **Name**: oikochu (or any name you prefer)
+   - **Environment**: Node
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+   - **Instance Type**: Free
+5. Add all environment variables from your `.env.local` file
+6. Click "Create Web Service"
+
+The application will be deployed with full API support, including all dynamic routes.
+
 ## 使用方法
 
 1. Google アカウントでログイン
