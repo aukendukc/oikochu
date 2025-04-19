@@ -9,6 +9,7 @@
     "preinstall": "mkdir -p /opt/render/project/src && cp -f package.json /opt/render/project/src/ || true",
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },

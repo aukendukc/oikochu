@@ -1,0 +1,5 @@
+[33m66059c6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Remove unused build script file
+[33m9d1fcb7[m Fix: Use inline bash commands instead of script file for Render deployment
+[33m44d16d0[m Add custom build script for Render deployment to fix package.json not found issue
+[33m6588ac3[m Simplify package.json scripts for better compatibility with Render
+[33mfc74fbd[m Fix: Simplify build configuration to solve package.json not found issue
